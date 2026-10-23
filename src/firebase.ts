@@ -157,11 +157,11 @@ export async function checkInGuest(guestId: string): Promise<void> {
   writeLocal(readLocal().map((guest) => guest.id === guestId ? { ...guest, arrived: true } : guest))
 }
 
-export async function findGuest(email: string, pin: string): Promise<Guest | null> {
+export async function findGuest(name: string, pin: string): Promise<Guest | null> {
   if (db) {
     const guestQuery = query(
       collection(db, 'guests'),
-      where('email', '==', email),
+      where('name', '==', name),
       where('pin', '==', pin),
     )
     const snapshot = await getMatchingDocs(guestQuery)
@@ -169,7 +169,7 @@ export async function findGuest(email: string, pin: string): Promise<Guest | nul
     return matchingGuest ? { id: matchingGuest.id, ...matchingGuest.data() } as Guest : null
   }
 
-  return readLocal().find((guest) => guest.email === email && guest.pin === pin) || null
+  return readLocal().find((guest) => guest.name === name && guest.pin === pin) || null
 }
 
 export async function updateGuest(guestId: string, updates: GuestUpdates): Promise<void> {

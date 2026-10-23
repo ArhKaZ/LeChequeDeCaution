@@ -169,18 +169,18 @@ export default function App() {
     }
   }
 
-  async function accessTicket(credentials: { email: string; pin: string }): Promise<void> {
+  async function accessTicket(credentials: { name: string; pin: string }): Promise<void> {
     setLoading(true)
     setAccessError('')
 
     try {
       const matchingGuest = await findGuest(
-        credentials.email,
+        credentials.name,
         credentials.pin,
       )
 
       if (!matchingGuest) {
-        setAccessError('E-mail ou code incorrect.')
+        setAccessError('Nom ou code incorrect.')
         return
       }
 

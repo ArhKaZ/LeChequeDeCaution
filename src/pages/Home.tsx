@@ -4,7 +4,7 @@ import './Home.css'
 
 
 export default function Home() {
-  const imageBaseUrl = import.meta.env.BASE_URL
+  const imageBaseUrl = import.meta.env.BASE_URL;
 
   return (
   <section className="hero page-enter">

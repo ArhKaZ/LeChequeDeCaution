@@ -5,35 +5,35 @@ import '../forms.css'
 import Alert from '../components/Alert'
 
 interface AccessPageProps {
-  onSubmit: (credentials: { email: string; pin: string }) => void
+  onSubmit: (credentials: { name: string; pin: string }) => void
   loading: boolean
   error: string
   onClearError: () => void
 }
 
 export default function AccessPage({ onSubmit, loading, error, onClearError }: AccessPageProps) {
-  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
   const [pin, setPin] = useState('')
 
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    onSubmit({ email, pin })
+    onSubmit({ name, pin })
   }
 
   return (
     <section className="content-page page-enter">
       <PageHeading kicker="Retrouver mon billet" title="Tu es déjà inscrit·e ?" />
-      <p className="section-intro">Entre l’adresse utilisée lors de ton inscription et ton code à 4 chiffres.</p>
+      <p className="section-intro">Entre ton nom et ton code à 4 chiffres.</p>
       <form className="guest-form" onSubmit={submit}>
         <label>
-          Adresse e-mail
+          Nom
           <input
             required
-            type="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            placeholder="camille@email.com"
-            autoComplete="email"
+            type="text"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Camille Dupont"
+            autoComplete="name"
           />
         </label>
         <label>
