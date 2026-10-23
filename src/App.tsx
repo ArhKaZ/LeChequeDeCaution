@@ -30,6 +30,9 @@ import EventValidationPage from './pages/EventValidationPage'
 import Alert from './components/Alert'
 import { eventConfig } from './eventConfig'
 import FlemmePage from './pages/FlemmePage'
+import { currentGuestStorageKey, initializeStorage } from './storage'
+
+initializeStorage()
 
 const defaultForm: FormState = {
   name: '',
@@ -44,7 +47,7 @@ export default function App() {
   const [form, setForm] = useState<FormState>(defaultForm)
   const [rulesAccepted, setRulesAccepted] = useState(false)
   const [guest, setGuest] = useState<Guest | null>(() => (
-    JSON.parse(localStorage.getItem('birthday-current-guest') || 'null') as Guest | null
+    JSON.parse(localStorage.getItem(currentGuestStorageKey) || 'null') as Guest | null
   ))
   const [guests, setGuests] = useState<Guest[]>([])
   const [events, setEvents] = useState<Event[]>([])
@@ -137,7 +140,7 @@ export default function App() {
 
         setGuest(updatedGuest)
         localStorage.setItem(
-          'birthday-current-guest',
+          currentGuestStorageKey,
           JSON.stringify(updatedGuest),
         )
       } else {
@@ -150,7 +153,7 @@ export default function App() {
 
         setGuest(savedGuest)
         localStorage.setItem(
-          'birthday-current-guest',
+          currentGuestStorageKey,
           JSON.stringify(savedGuest),
         )
       }
@@ -183,7 +186,7 @@ export default function App() {
 
       setGuest(matchingGuest)
       localStorage.setItem(
-        'birthday-current-guest',
+        currentGuestStorageKey,
         JSON.stringify(matchingGuest),
       )
       go('ticket')

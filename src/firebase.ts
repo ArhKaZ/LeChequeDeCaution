@@ -46,8 +46,8 @@ function withTimeout<T>(request: Promise<T>, message: string): Promise<T> {
   ])
 }
 
-const localKey = 'birthday-guest-list'
-const eventsLocalKey = 'birthday-event-list'
+const localKey = 'birthday-guest-list-v2'
+const eventsLocalKey = 'birthday-event-list-v2'
 const eventsCollection = 'events'
 const readLocal = (): Guest[] => JSON.parse(localStorage.getItem(localKey) || '[]') as Guest[]
 const writeLocal = (guests: Guest[]): void => localStorage.setItem(localKey, JSON.stringify(guests))
