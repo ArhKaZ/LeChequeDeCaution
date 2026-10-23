@@ -1,0 +1,20 @@
+.stats { border: 1px solid var(--line); background: var(--paper); padding: 18px; margin-bottom: 20px; }
+.stats strong { font-family: 'Playfair Display', serif; font-size: 42px; }
+.stats strong small { color: var(--muted); font: 18px 'DM Sans'; }
+.stats span { color: var(--muted); font-size: 12px; margin-left: 10px; }
+.progress { height: 4px; background: #9FB4C7; margin-top: 15px; }
+.progress i { display: block; height: 100%; background: var(--coral); transition: width .3s; }
+.guest-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.avatar { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #9FB798; font-family: 'Playfair Display', serif; }
+.avatar.arrived { background: var(--ink); color: #EEEEFF; }
+.guest-row div { flex: 1; }
+.guest-row strong { display: block; font-size: 14px; }
+.guest-row small { color: var(--muted); font-size: 11px; }
+.checkin { border: 1px solid var(--ink); background: transparent; padding: 8px 11px; font-size: 11px; }
+.arrived-label { color: #28587B; font-size: 11px; }

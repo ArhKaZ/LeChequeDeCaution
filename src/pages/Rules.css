@@ -1,0 +1,12 @@
+.rules-list { border-top: 1px solid var(--line); }
+.check-row { display: flex; align-items: center; gap: 11px; margin-top: 25px; font-size: 13px; cursor: pointer; }
+.check-row input { position: absolute; opacity: 0; }
+.fake-check {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 22px;
+  border: 1px solid var(--ink);
+  color: transparent;
+}
+.check-row input:checked + .fake-check { background: var(--ink); color: #EEEEFF; }

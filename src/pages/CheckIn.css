@@ -1,0 +1,13 @@
+.checkin-page { text-align: center; padding-top: 8vh; }
+.checkin-page h1 { margin-left: auto; margin-right: auto; }
+.checkin-mark {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #EEEEFF;
+  font-size: 34px;
+}

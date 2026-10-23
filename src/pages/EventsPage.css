@@ -1,0 +1,39 @@
+.content-page { max-width: 580px; margin: 0 auto;}
+.page-enter { animation: rise .45s ease both; }
+.events-page { padding-bottom: 30px; }
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+.btn-add-event {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-add-event button {
+    width: min(100%, 360px);
+    min-height: 48px;
+    border: 0;
+    padding: 0 18px;
+    background: var(--ink);
+    color: #EEEEFF;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(40, 88, 123, .18);
+}
+
+.btn-add-event button:disabled {
+    cursor: not-allowed;
+    opacity: .45;
+}
+
+.list-events {
+    display: flex;
+    gap: 3vh;
+    flex-direction: column;
+    justify-content: space-between;
+}

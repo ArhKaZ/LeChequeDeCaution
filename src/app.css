@@ -1,0 +1,100 @@
+.app-shell { min-height: 100vh; padding-bottom: 92px; }
+.topbar {
+  max-width: 680px;
+  margin: auto;
+  padding: 22px 22px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #EEEEFF;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+}
+.status-pill {
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 7px 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.status-pill.online { color: #28587B; border-color: #9FB798; }
+.page-wrap { max-width: 680px; margin: auto; padding: 36px 22px; }
+.bottom-nav {
+  position: fixed;
+  z-index: 4;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 680px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  padding: 10px 12px 13px;
+  border-top: 1px solid var(--line);
+  background: rgba(238,238,255,.94);
+  backdrop-filter: blur(12px);
+}
+.bottom-nav button { border: 0; background: transparent; color: var(--muted); font-size: 10px; }
+.bottom-nav button span { display: block; margin-bottom: 5px; font-size: 18px; }
+.bottom-nav button.active { color: var(--ink); font-weight: 700; }
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 92px;
+  transform: translateX(-50%);
+  width: calc(100% - 44px);
+  max-width: 400px;
+  padding: 12px 15px;
+  background: var(--ink);
+  color: #EEEEFF;
+  font-size: 12px;
+}
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.alert-close {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+}
+
+@media (max-width: 470px) {
+  .page-wrap { padding-top: 27px; }
+}
+
+@media print {
+  .topbar, .bottom-nav, .button, .helper { display: none; }
+  body, .app-shell { background: #EEEEFF; }
+  .page-wrap { padding: 0; }
+}

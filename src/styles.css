@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #28587B;
+  background: #EEEEFF;
+  font-synthesis: none;
+  --ink: #28587B;
+  --muted: #7F7CAF;
+  --paper: #EEEEFF;
+  --sage: #9FB798;
+  --coral: #7F7CAF;
+  --line: #9FB4C7;
+  --mist: #9FB4C7;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: radial-gradient(circle at 12% 2%, #9FB798 0, transparent 29%), #EEEEFF;
+}
+button, input { font: inherit; }
+button { cursor: pointer; }
+h1, h2, p { margin-top: 0; }
+h1 {
+  max-width: 580px;
+  margin-bottom: 18px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 12vw, 78px);
+  font-weight: 600;
+  line-height: .98;
+}
+.eyebrow {
+  color: var(--coral);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+.button {
+  min-height: 50px;
+  border: 0;
+  padding: 0 20px;
+  font-weight: 700;
+  transition: transform .2s, background .2s;
+}
+.button:hover { transform: translateY(-2px); }
+.button.primary { background: var(--ink); color: #EEEEFF; }
+.button.primary span { margin-left: 26px; color: var(--sage); font-size: 20px; }
+.button.quiet {
+  color: var(--ink);
+  background: transparent;
+  border-bottom: 1px solid var(--ink);
+  padding: 0 0 3px;
+  min-height: auto;
+}
+.button.full { width: 100%; margin-top: 27px; }
+.button:disabled { cursor: not-allowed; opacity: .38; transform: none; }
+.page-enter { animation: rise .45s ease both; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.content-page { max-width: 580px; margin: 0 auto; }
+.page-heading { margin-bottom: 34px; }
+.page-heading h1 { font-size: clamp(39px, 10vw, 62px); margin-bottom: 0; }
+.intro { max-width: 370px; color: var(--muted); font-size: 17px; line-height: 1.55; }
+.helper, .section-intro {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 24px 0;
+}
+.empty { color: var(--muted); font-size: 14px; padding: 28px 0; }
+
+@media (max-width: 470px) {
+  .info-grid { grid-template-columns: 1fr; }
+  .info-card {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 3px 8px;
+    align-items: center;
+  }
+  .info-card span { grid-row: span 2; }
+  .info-card strong { margin: 0; }
+  .info-card small { grid-column: 2; }
+}

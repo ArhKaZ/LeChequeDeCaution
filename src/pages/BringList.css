@@ -1,0 +1,12 @@
+.bring-list { display: flex; flex-direction: column; }
+.bring-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.bring-row > span { color: var(--coral); font-size: 20px; }
+.bring-row div { flex: 1; }
+.bring-row strong { display: block; font-size: 14px; }
+.bring-row small { color: var(--muted); font-size: 11px; }

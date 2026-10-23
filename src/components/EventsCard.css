@@ -1,0 +1,25 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 24px;
+    box-shadow: 10px 10px 0 #9FB798;
+}
+
+.column-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 45%;
+}
+
+.column-card:last-child {
+    gap: 12px;
+}

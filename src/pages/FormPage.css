@@ -1,0 +1,25 @@
+.bring-fields { border: 0; padding: 0; margin: 20px 0; }
+.bring-fields legend { padding: 0; font-size: 12px; font-weight: 700; }
+.bring-input-row { display: flex; align-items: center; gap: 10px; }
+.bring-input-row input { flex: 1; }
+.remove-item {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  background: transparent;
+  font-size: 19px;
+  line-height: 1;
+}
+.add-item {
+  margin-top: 12px;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: 0 0 3px;
+  color: var(--ink);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 700;
+}

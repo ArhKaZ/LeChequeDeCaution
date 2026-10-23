@@ -1,0 +1,10 @@
+.image-mid {
+    max-width: 90vw;
+}
+
+.image-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

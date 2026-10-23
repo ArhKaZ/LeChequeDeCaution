@@ -1,0 +1,38 @@
+.guest-form label {
+  display: block;
+  margin: 20px 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+.guest-form small { color: var(--muted); font-weight: 400; }
+input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px 0;
+  border: 0;
+  border-bottom: 1px solid var(--mist);
+  outline: none;
+  color: var(--ink);
+  background: transparent;
+  font-size: 16px;
+}
+input:focus { border-color: var(--coral); }
+.form-error {
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.form-error.alert,
+.form-message.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.form-message {
+  padding: 12px;
+  background: #9FB798;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.5;
+}

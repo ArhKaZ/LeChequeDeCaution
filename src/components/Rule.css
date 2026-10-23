@@ -1,0 +1,4 @@
+.rule { display: flex; gap: 19px; padding: 23px 0; border-bottom: 1px solid var(--line); }
+.rule > span { color: var(--coral); font-family: 'Playfair Display', serif; font-size: 19px; }
+.rule strong { display: block; margin-bottom: 7px; font-size: 16px; }
+.rule p { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }

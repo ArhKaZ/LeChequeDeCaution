@@ -1,0 +1,12 @@
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.info-card { background: var(--paper); padding: 18px 13px; min-height: 125px; }
+.info-card span, .info-card small { display: block; color: var(--muted); font-size: 11px; line-height: 1.4; }
+.info-card strong { display: block; margin: 12px 0 7px; font-size: 14px; }
+.note-block { display: flex; gap: 13px; padding: 22px 0 4px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.note-icon { color: var(--coral); font-size: 23px; }
