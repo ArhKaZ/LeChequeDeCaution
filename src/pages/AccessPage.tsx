@@ -32,7 +32,7 @@ export default function AccessPage({ onSubmit, loading, error, onClearError }: A
             type="text"
             value={name}
             onChange={(event) => setName(event.target.value)}
-            placeholder="Camille Dupont"
+            placeholder="Jean Merde Bardella"
             autoComplete="name"
           />
         </label>
@@ -58,9 +58,6 @@ export default function AccessPage({ onSubmit, loading, error, onClearError }: A
           {loading ? 'Recherche…' : 'Revoir mon billet'} <span>→</span>
         </button>
       </form>
-      <button className="button quiet full" onClick={() => go('forgot')}>
-        J’ai oublié mon code
-      </button>
     </section>
   )
 }

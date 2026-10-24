@@ -21,7 +21,7 @@ export default function Home() {
     <div className='buttons-home'>
       <button className='button primary' onClick={() => go('details')}>Je viens <span>→</span></button>
       <button className='button primary' onClick={() => go('flemme-page')}>Grosse flemme <span>x</span></button>
-      <button className="button quiet">Déjà inscrit·e</button>
+      <button className='button quiet' onClick={() => go('access')}>Déjà inscrit·e</button>
     </div>
   </section>
   );
