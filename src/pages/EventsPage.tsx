@@ -53,6 +53,7 @@ export default function EventsPage({
               onRegister={() => onRegisterEvent(event)}
               onValidate={() => onValidateEvent(event)}
               canRegister={Boolean(currentGuest)}
+              isRegistered={Boolean(currentGuest && event.registrants.includes(currentGuest.id))}
             />
           ))
         )}

@@ -6,6 +6,7 @@ interface EventsCardProps {
     onRegister: () => void
     onValidate: () => void
     canRegister: boolean
+    isRegistered: boolean
 }
 
 export default function EventsCard({
@@ -13,6 +14,7 @@ export default function EventsCard({
     onRegister,
     onValidate,
     canRegister,
+    isRegistered,
 }: EventsCardProps) {
     return (
         <div className="card">
@@ -25,16 +27,17 @@ export default function EventsCard({
             <div className="column-card">
             {event.validated ? 
                 <>
-                    <button className='button primary' disabled={!canRegister} onClick={onRegister}>
+                    <button
+                        className='button primary'
+                        disabled={!canRegister || isRegistered}
+                        onClick={onRegister}
+                    >
                         S'inscrire
                     </button>
                     <small>{event.registeredGuests?.length || 0} inscrit·es</small>
                 </> : 
                 <>
                     <p>Attente de validation</p>
-                    {/* <button className="button" onClick={onValidate}>
-                        Valider
-                    </button> */}
                 </>}
             </div>
         </div>
