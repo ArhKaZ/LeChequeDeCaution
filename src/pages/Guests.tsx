@@ -11,7 +11,7 @@ interface GuestsProps {
 
 export default function Guests({ guests, arrivedCount, loading }: GuestsProps) {
   return <section className="content-page page-enter">
-    <PageHeading kicker="Petit coquin" title="Qui est déjà arrivé ?" />
+    <PageHeading kicker="Déjà sur place" title="Qui est déjà arrivé ?" />
     <div className="stats">
       <strong>{arrivedCount}<small> / {guests.length}</small></strong>
       <span>invité·es arrivé·es</span>
