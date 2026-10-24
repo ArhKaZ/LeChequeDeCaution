@@ -67,7 +67,7 @@ export default function App() {
     if (page === 'guests' || page === 'bring' || page === 'events') {
       refreshGuests()
     }
-    if (page === 'events') {
+    if (page === 'events' || page === 'event-validation') {
       refreshEvents()
     }
   }, [page])
@@ -276,6 +276,10 @@ export default function App() {
     }
   }
 
+  function openEventValidation(event: Event): void {
+    window.location.hash = `/event-validation/${event.id}`
+  }
+
   function editGuest(): void {
     if (!guest) {
       return
@@ -405,6 +409,7 @@ export default function App() {
             currentGuest={guest}
             onCreateEvent={createEvent}
             onRegisterEvent={registerForEvent}
+            onValidateEvent={openEventValidation}
           />
         )}
         {page === 'event-validation' && (

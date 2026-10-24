@@ -9,6 +9,7 @@ interface EventsPageProps {
   currentGuest: Guest | null
   onCreateEvent: (event: Omit<EventInput, 'createdBy'>) => Promise<void>
   onRegisterEvent: (event: Event) => Promise<void>
+  onValidateEvent: (event: Event) => void
 }
 
 export default function EventsPage({
@@ -16,6 +17,7 @@ export default function EventsPage({
   currentGuest,
   onCreateEvent,
   onRegisterEvent,
+  onValidateEvent,
 }: EventsPageProps) {
   const [showForm, setShowForm] = useState(false)
   const [name, setName] = useState('')
@@ -49,6 +51,7 @@ export default function EventsPage({
               key={event.id}
               event={event}
               onRegister={() => onRegisterEvent(event)}
+              onValidate={() => onValidateEvent(event)}
               canRegister={Boolean(currentGuest)}
             />
           ))
