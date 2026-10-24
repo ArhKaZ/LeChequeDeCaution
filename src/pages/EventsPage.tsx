@@ -79,15 +79,15 @@ export default function EventsPage({
           </button>
         </form>
       )}
-      {/* <div className="btn-add-event"> */}
-        {/* <button
+      <div className="btn-add-event">
+        <button
           disabled={!currentGuest}
           onClick={() => setShowForm((visible) => !visible)}
           title={!currentGuest ? 'Inscris-toi pour proposer un événement' : undefined}
         >
           {showForm ? 'Fermer' : 'Proposer un événement'}
         </button>
-      </div> */}
+      </div>
       </div>
     </section>
   )
