@@ -67,7 +67,7 @@ export default function App() {
     if (page === 'guests' || page === 'bring' || page === 'events') {
       refreshGuests()
     }
-    if (page === 'events' || page === 'event-validation') {
+    if (page === 'ticket' || page === 'events' || page === 'event-validation') {
       refreshEvents()
     }
   }, [page])
@@ -371,7 +371,7 @@ export default function App() {
             isEditing={page === 'edit'}
           />
         )}
-        {page === 'ticket' && <Ticket guest={guest} onEdit={editGuest} />}
+        {page === 'ticket' && <Ticket guest={guest} events={events} onEdit={editGuest} />}
         {page === 'access' && (
           <AccessPage
             onSubmit={accessTicket}
