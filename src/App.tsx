@@ -197,7 +197,7 @@ export default function App() {
     }
   }
 
-  async function createEvent(input: { name: string; hour: string }): Promise<void> {
+  async function createEvent(input: { name: string; hour: string; description: string }): Promise<void> {
     if (!guest) {
       setMessage('Inscris-toi avant de proposer un événement.')
       return

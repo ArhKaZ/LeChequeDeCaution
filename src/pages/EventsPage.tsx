@@ -22,16 +22,18 @@ export default function EventsPage({
   const [showForm, setShowForm] = useState(false)
   const [name, setName] = useState('')
   const [hour, setHour] = useState('')
+  const [description, setDescription] = useState('')
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     await onCreateEvent({
-        name, hour,
+        name, hour, description,
         validated: false,
         registrants: []
     })
     setName('')
     setHour('')
+    setDescription('')
     setShowForm(false)
   }
 
@@ -76,6 +78,16 @@ export default function EventsPage({
               type="time"
               value={hour}
               onChange={(event) => setHour(event.target.value)}
+            />
+          </label>
+          <label>
+            Description
+            <textarea
+              required
+              value={description}
+              onChange={(event) => setDescription(event.target.value)}
+              placeholder="Décris l’activité et ce qu’il faut prévoir."
+              rows={4}
             />
           </label>
           <button className="button primary full" type="submit">

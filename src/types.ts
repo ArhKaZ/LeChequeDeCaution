@@ -31,6 +31,7 @@ export interface Event {
   id: string
   hour: string
   name: string
+  description: string
   validated: boolean
   registrants: string[]
   createdBy: string
@@ -41,6 +42,7 @@ export interface Event {
 export interface EventInput {
   hour: string
   name: string
+  description: string
   validated: boolean
   registrants: string[]
   createdBy: string
